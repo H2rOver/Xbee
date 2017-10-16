@@ -2,7 +2,7 @@
           Xbee1
           S. Timpe
          
-          Makes Arduino send 1 character via XBee wireless to another XBee connected
+          Makes Arduino send the alphabet 1 character at a time via XBee wireless to another XBee connected
           to a computer via a USB cable.
 
           The circuit:
@@ -10,17 +10,14 @@
           * TX is digital pin 3
          
           Based on a sketch created by D. Thiebaut
-         
         */
 
         #include <SoftwareSerial.h>
 
         SoftwareSerial xbee(2, 3); // TX, RX
         char c = 'A';
-        char char1, char2, char3;
-        char jon;
-        int  pingPong = 1;
-        int tripleAflag = 0;
+        //char jon;
+        int  pingPong = 1;	// to control the lighting and delighting of the LED connected to pin 13
 
         void setup()  {
            Serial.begin(9600);
