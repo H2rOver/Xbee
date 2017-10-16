@@ -6,8 +6,8 @@
           to a computer via a USB cable.
 
           The circuit:
-          * RX is digital pin 0
-          * TX is digital pin 1
+          * RX is digital pin 2
+          * TX is digital pin 3
          
           Based on a sketch created by D. Thiebaut
          
@@ -32,19 +32,6 @@
         }
 
         void loop()  {
-          // send character via XBee to other XBee connected to Mac
-          // via USB cable
-          //c = Serial.read();
-
-//          while(tripleAflag == 0)
-//          {
-//            char3 = char2;
-//            char2 = char1;
-//            char1 = Serial.read();
-//
-//            if(char3 == 'A' && char2 == 'A' && char3 == 'A')
-//              tripleAflag = 1;
-//          }
 
           xbee.write('A');
           xbee.write('A');
